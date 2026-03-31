@@ -27,6 +27,11 @@ bool cekFibonacci() {
     return (b == angka || angka == 0);
 }
 
+// prosedur input angka
+void inputAngka() {
+    cin >> angka;
+}
+
 int main() {
     return 0;
 }
