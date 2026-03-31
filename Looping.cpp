@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
+// variabel global
 int angka;
 int pilihan;
 
-// semua fungsi tetap
-
+// cek bilangan prima
 bool cekPrima() {
     if (angka < 2) return false;
     int i = 2;
@@ -16,6 +16,7 @@ bool cekPrima() {
     return true;
 }
 
+// cek bilangan fibonacci
 bool cekFibonacci() {
     int a = 0, b = 1;
     while (b < angka) {
@@ -26,14 +27,13 @@ bool cekFibonacci() {
     return (b == angka || angka == 0);
 }
 
+// prosedur input angka
 void inputAngka() {
     cout << "Masukkan angka: ";
     cin >> angka;
-    if (angka < 0) {
-        cout << "Input tidak boleh negatif!" << endl;
-    }
 }
 
+// prosedur tampil hasil prima
 void tampilHasilPrima() {
     if (cekPrima())
         cout << angka << " adalah bilangan prima." << endl;
@@ -41,6 +41,7 @@ void tampilHasilPrima() {
         cout << angka << " bukan bilangan prima." << endl;
 }
 
+// prosedur tampil hasil fibonacci
 void tampilHasilFibonacci() {
     if (cekFibonacci())
         cout << angka << " adalah bilangan fibonacci." << endl;
@@ -48,6 +49,7 @@ void tampilHasilFibonacci() {
         cout << angka << " bukan bilangan fibonacci." << endl;
 }
 
+// function tampil menu
 void tampilMenu() {
     cout << "\n=== MENU ===" << endl;
     cout << "1. Cek Bilangan Prima" << endl;
@@ -65,7 +67,10 @@ int main() {
                 inputAngka();
                 tampilHasilPrima();
                 break;
-        }
+            case 2:
+                inputAngka();
+                tampilHasilFibonacci();
+                break;
     }
     return 0;
 }
