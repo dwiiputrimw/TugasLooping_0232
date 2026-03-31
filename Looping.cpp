@@ -1,13 +1,51 @@
 #include <iostream>
 using namespace std;
 
-// variabel global
 int angka;
 int pilihan;
 
-// (fungsi lain tetap sama)
+bool cekPrima() {
+    if (angka < 2) return false;
+    int i = 2;
+    while (i * i <= angka) {
+        if (angka % i == 0) return false;
+        i++;
+    }
+    return true;
+}
 
-// function tampil menu
+bool cekFibonacci() {
+    int a = 0, b = 1;
+    while (b < angka) {
+        int temp = b;
+        b = a + b;
+        a = temp;
+    }
+    return (b == angka || angka == 0);
+}
+
+void inputAngka() {
+    cout << "Masukkan angka: ";
+    cin >> angka;
+    if (angka < 0) {
+        cout << "Input tidak boleh negatif!" << endl;
+    }
+}
+
+void tampilHasilPrima() {
+    if (cekPrima())
+        cout << angka << " adalah bilangan prima." << endl;
+    else
+        cout << angka << " bukan bilangan prima." << endl;
+}
+
+void tampilHasilFibonacci() {
+    if (cekFibonacci())
+        cout << angka << " adalah bilangan fibonacci." << endl;
+    else
+        cout << angka << " bukan bilangan fibonacci." << endl;
+}
+
 void tampilMenu() {
     cout << "\n=== MENU ===" << endl;
     cout << "1. Cek Bilangan Prima" << endl;
@@ -18,5 +56,8 @@ void tampilMenu() {
 }
 
 int main() {
+    while (true) {
+        tampilMenu();
+    }
     return 0;
 }
