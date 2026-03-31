@@ -7,6 +7,7 @@ int pilihan;
 
 // cek bilangan prima
 bool cekPrima() {
+    if (angka < 2) return false;
     return true;
 }
 
