@@ -5,6 +5,11 @@ using namespace std;
 int angka;
 int pilihan;
 
+// cek bilangan prima
+bool cekPrima() {
+    return true;
+}
+
 int main() {
     return 0;
 }
