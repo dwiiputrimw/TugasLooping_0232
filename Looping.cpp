@@ -44,6 +44,14 @@ void tampilHasilPrima() {
         cout << angka << " bukan bilangan prima." << endl;
 }
 
+// prosedur tampil hasil fibonacci
+void tampilHasilFibonacci() {
+    if (cekFibonacci())
+        cout << angka << " adalah bilangan fibonacci." << endl;
+    else
+        cout << angka << " bukan bilangan fibonacci." << endl;
+}
+
 int main() {
     return 0;
 }
