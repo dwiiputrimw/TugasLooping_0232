@@ -4,7 +4,7 @@ using namespace std;
 int angka;
 int pilihan;
 
-// (semua fungsi sama seperti sebelumnya)
+// semua fungsi tetap
 
 bool cekPrima() {
     if (angka < 2) return false;
@@ -61,7 +61,10 @@ int main() {
     while (true) {
         tampilMenu();
         switch (pilihan) {
-
+            case 1:
+                inputAngka();
+                tampilHasilPrima();
+                break;
         }
     }
     return 0;
