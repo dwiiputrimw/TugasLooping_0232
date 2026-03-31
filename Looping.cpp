@@ -29,9 +29,12 @@ bool cekFibonacci() {
 
 // prosedur input angka
 void inputAngka() {
+    cout << "Masukkan angka: ";
     cin >> angka;
+    if (angka < 0) {
+        cout << "Input tidak boleh negatif!" << endl;
+    }
 }
-
 int main() {
     return 0;
 }
