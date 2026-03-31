@@ -35,6 +35,15 @@ void inputAngka() {
         cout << "Input tidak boleh negatif!" << endl;
     }
 }
+
+// prosedur tampil hasil prima
+void tampilHasilPrima() {
+    if (cekPrima())
+        cout << angka << " adalah bilangan prima." << endl;
+    else
+        cout << angka << " bukan bilangan prima." << endl;
+}
+
 int main() {
     return 0;
 }
